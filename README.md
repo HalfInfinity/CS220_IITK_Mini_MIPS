@@ -1,1 +1,1 @@
-# CS220--computer-organisation
+# CS220_IITK_Mini_MIPS
