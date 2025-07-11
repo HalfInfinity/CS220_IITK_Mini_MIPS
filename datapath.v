@@ -61,19 +61,7 @@ module datapath(clk,rst,inst, operation, read_data, RegWrite, RegDst, ALUSrc,
     
     //jump offset
     assign jump_offset = inst[25:0];
-    
-//    always @(inst) begin
-//        if (Lui) begin
-//            $display("\n=== [LUI DEBUG] Time: %0t ===", $time);
-//            $display("inst           = %h", inst);
-//            $display("rs             = %h", rs);
-//            $display("rt             = %h", rt);
-//            $display("rd             = %h", rd);
-//            $display("imm            = %h", imm);
-//            $display("alu_imm        = %h", alu_imm);
-//            $display("write_reg_data = %h", write_reg_data);
-//        end
-//    end
+  
 
     pc            PC        (clk,rst,pc_next,pc);
     update_pc     UpdatePC  (pc,jump_offset, signex_imm, read_data1, Branch, Br_Op, Zero, lt, ltu, gt, gtu, 
